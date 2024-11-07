@@ -9,12 +9,13 @@ from six.moves import urllib
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_absolute_error
-from sklearn.metrics import mean_squared_error
-from sklearn.model_selection import GridSearchCV
-from sklearn.model_selection import RandomizedSearchCV
-from sklearn.model_selection import StratifiedShuffleSplit
-from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+from sklearn.model_selection import (
+    GridSearchCV,
+    RandomizedSearchCV,
+    StratifiedShuffleSplit,
+    train_test_split,
+)
 from sklearn.tree import DecisionTreeRegressor
 
 DOWNLOAD_ROOT = "https://raw.githubusercontent.com/ageron/handson-ml/master/"
@@ -43,9 +44,6 @@ def load_housing_data(housing_path=HOUSING_PATH):
 
 housing = load_housing_data()
 
-train_set, test_set = train_test_split(
-    housing, test_size=0.2, random_state=42
-)
 
 housing["income_cat"] = pd.cut(
     housing["median_income"],
@@ -53,6 +51,11 @@ housing["income_cat"] = pd.cut(
     labels=[1, 2, 3, 4, 5],
 )
 
+housing["income_cat"] = pd.cut(
+    housing["median_income"],
+    bins=[0.0, 1.5, 3.0, 4.5, 6.0, np.inf],
+    labels=[1, 2, 3, 4, 5],
+)
 
 split = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
 for train_index, test_index in split.split(housing, housing["income_cat"]):
@@ -64,9 +67,7 @@ def income_cat_proportions(data):
     return data["income_cat"].value_counts() / len(data)
 
 
-train_set, test_set = train_test_split(
-    housing, test_size=0.2, random_state=42
-)
+train_set, test_set = train_test_split(housing, test_size=0.2, random_state=42)
 
 compare_props = pd.DataFrame(
     {
@@ -91,9 +92,7 @@ housing.plot(kind="scatter", x="longitude", y="latitude", alpha=0.1)
 
 corr_matrix = housing.drop("ocean_proximity", axis=1).corr()
 corr_matrix["median_house_value"].sort_values(ascending=False)
-housing["rooms_per_household"] = (
-    housing["total_rooms"] / housing["households"]
-)
+housing["rooms_per_household"] = housing["total_rooms"] / housing["households"]
 housing["bedrooms_per_room"] = (
     housing["total_bedrooms"] / housing["total_rooms"]
 )
@@ -128,7 +127,6 @@ housing_cat = housing[["ocean_proximity"]]
 housing_prepared = housing_tr.join(
     pd.get_dummies(housing_cat, drop_first=True)
 )
-
 
 lin_reg = LinearRegression()
 lin_reg.fit(housing_prepared, housing_labels)
@@ -176,11 +174,7 @@ param_grid = [
     # try 12 (3×4) combinations of hyperparameters
     {"n_estimators": [3, 10, 30], "max_features": [2, 4, 6, 8]},
     # then try 6 (2×3) combinations with bootstrap set as False
-    {
-        "bootstrap": [False],
-        "n_estimators": [3, 10],
-        "max_features": [2, 3, 4],
-    },
+    {"bootstrap": [False], "n_estimators": [3, 10], "max_features": [2, 3, 4]},
 ]
 
 forest_reg = RandomForestRegressor(random_state=42)
