@@ -45,7 +45,11 @@ def load_housing_data(housing_path=HOUSING_PATH):
 housing = load_housing_data()
 
 
-train_set, test_set = train_test_split(housing, test_size=0.2, random_state=42)
+housing["income_cat"] = pd.cut(
+    housing["median_income"],
+    bins=[0.0, 1.5, 3.0, 4.5, 6.0, np.inf],
+    labels=[1, 2, 3, 4, 5],
+)
 
 housing["income_cat"] = pd.cut(
     housing["median_income"],
@@ -100,7 +104,6 @@ housing = strat_train_set.drop(
     "median_house_value", axis=1
 )  # drop labels for training set
 housing_labels = strat_train_set["median_house_value"].copy()
-
 
 imputer = SimpleImputer(strategy="median")
 
