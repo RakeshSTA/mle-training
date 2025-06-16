@@ -1,0 +1,5 @@
+{
+    "python.defaultInterpreterPath": "~/miniforge3/envs/mle-dev/bin/python",
+    "isort.check": true,
+    "editor.formatOnSave": true
+}
