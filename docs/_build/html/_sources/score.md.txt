@@ -1,0 +1,19 @@
+# Score Models
+
+```{eval-rst}
+.. automodule:: tamlep_package.score
+```
+
+## Classes & Functions
+
+```{eval-rst}
+.. autosummary::
+
+   score_models
+```
+
+## Score Models Trained on Housing Dataset
+
+```{eval-rst}
+.. autofunction:: tamlep_package.score.score_models
+```

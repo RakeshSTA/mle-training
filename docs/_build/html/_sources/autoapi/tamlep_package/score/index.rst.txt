@@ -1,0 +1,108 @@
+tamlep_package.score
+====================
+
+.. py:module:: tamlep_package.score
+
+.. autoapi-nested-parse::
+
+   Score trained models on the test dataset.
+
+   Functions
+   --------
+   score_models(test_data_file: Optional[str] = None)
+       Score trained models on the test set.
+
+   Command-line Usage
+   ------------------
+   To use this module from the command line, run:
+       python score.py [OPTIONS]
+
+   Command-line Options
+   --------
+   --test-data-path: str, optional
+       Path to test dataset
+   --models-dir-path: str,
+       Path to saved model objects as joblib files
+   --artifacts-dir-path
+       Path to artifacts folder to save scoring results
+   --log-level : {"DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"}
+       Logging level
+   --log-file-path
+       Path to log file
+   --no-console-log
+       Flag to turn off logs to console
+
+   Examples
+   --------
+   ```
+   python score.py --log-level INFO     --log-file-path ./logs/app.log --no-console-log
+   ```
+
+   ..
+       !! processed by numpydoc !!
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   tamlep_package.score.logger
+   tamlep_package.score.parser
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   tamlep_package.score.score_models
+
+
+Module Contents
+---------------
+
+.. py:data:: logger
+
+.. py:function:: score_models(test_data_file: Optional[str] = None)
+
+   
+   Score the trained models on the test dataset.
+
+   Parameters
+   --------
+   test_data_file : str, optional
+       The name of the test data file.
+       Defaults to "test_set.csv"
+       Reads the test data from processed data folder set
+       in the configuration.
+       The scoring results are saved to artifacts folder set
+       in the configuration. Models are sorted by ascending
+       order of mean squared error & mean absolute error.
+
+
+
+
+   :Returns:
+
+       pd.DataFrame
+           The pandas dataframe containing mean squared error &
+           mean absolute error for all trained models. Models are
+           sorted by ascending order of mean squared error &
+           mean absolute error.
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:data:: parser
+

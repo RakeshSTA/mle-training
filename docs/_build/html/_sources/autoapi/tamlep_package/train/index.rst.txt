@@ -1,0 +1,134 @@
+tamlep_package.train
+====================
+
+.. py:module:: tamlep_package.train
+
+.. autoapi-nested-parse::
+
+   Train Machine learning models on housing dataset.
+
+   Functions
+   --------
+   train_models(train_data_file: Optional[str] = None)
+       Train Machine Learning models on the training set
+       created by `ingest_data.py`.
+
+   Command-line Usage
+   ------------------
+   To use this module from the command line, run:
+       python train.py [OPTIONS]
+
+   Command-line Options
+   --------
+   --train-data-path: str, optional
+       Path to training dataset
+   --models-dir-path: str,
+       Path to save output model objects as joblib file
+   --artifacts-dir-path
+       Path to save training artifacts (feature importance data)
+   --log-level : {"DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"}
+       Logging level
+   --log-file-path
+       Path to log file
+   --no-console-log
+       Flag to turn off logs to console
+
+   Examples
+   --------
+   ```
+   python train.py --log-level INFO     --log-file-path ./logs/app.log --no-console-log
+   ```
+
+   ..
+       !! processed by numpydoc !!
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   tamlep_package.train.logger
+   tamlep_package.train.pre_proc_steps
+   tamlep_package.train.pre_proc_pipeline
+   tamlep_package.train.models_dict
+   tamlep_package.train.rf_model
+   tamlep_package.train.param_distribs
+   tamlep_package.train.param_grid
+   tamlep_package.train.rf_model2
+   tamlep_package.train.rf_with_grid_search
+   tamlep_package.train.parser
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   tamlep_package.train.train_models
+
+
+Module Contents
+---------------
+
+.. py:data:: logger
+
+.. py:data:: pre_proc_steps
+
+.. py:data:: pre_proc_pipeline
+
+.. py:data:: models_dict
+
+.. py:data:: rf_model
+
+.. py:data:: param_distribs
+
+.. py:data:: param_grid
+
+.. py:data:: rf_model2
+
+.. py:data:: rf_with_grid_search
+
+.. py:function:: train_models(train_data_file: Optional[str] = None)
+
+   
+   Train models and save them to models folder.
+
+   Read processed data from the processed data folder set in configuration.
+   Trains the following models:
+    1. Linear Regressionm
+    2. Decision Tree Regressor
+    3. Random Forest Regressor with random search hyperparameter tuning
+    4. Random Forest Regressor with grid search hyperparameter tuning
+
+   Trained model objects are saved to a joblib file each in
+   the `models_path` folder set in configuration.
+   Feature importance data for each model is saved to a .csv file in
+   the `artifacts` folder set in configuration.
+
+   Parameters
+   --------
+   train_data_file : str, optional
+        File name of training data file.
+        Defaults to 'train_set.csv'
+        Reads the file from the processed data folder set in configuration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:data:: parser
+

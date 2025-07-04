@@ -5,3 +5,54 @@ line-length = 79
 profile = 'black'
 line_length = 79
 force_single_line = true
+
+[project]
+name = "tamlep-package"
+version = "0.1.0"
+description = "A python package for TAMLEP project"
+authors = [
+    {name = "RakeshSTA",email = "rakesh.sukumar@tigeranalytics.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib (>=3.10.3,<4.0.0)",
+    "numpy (>=2.3.0,<3.0.0)",
+    "pandas (>=2.3.0,<3.0.0)",
+    "scipy (>=1.15.3,<2.0.0)",
+    "scikit-learn (>=1.7.0,<2.0.0)",
+    "six (>=1.17.0,<2.0.0)",
+]
+
+[project.urls]
+repository = "https://github.com/RakeshSTA/mle-training"
+
+[tool.poetry]
+packages = [
+    {include = "tamlep_package", from = "src"}
+]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.0"
+sphinx = "8.2.3"
+debugpy = "^1.8.14"
+pytest-depends = "^1.0.1"
+pytest-env = "^1.1.5"
+numpydoc = "^1.9.0"
+myst-parser = "^4.0.1"
+sphinx-autobuild = "^2024.10.3"
+furo = "^2024.8.6"
+sphinx-design = "^0.6.1"
+sphinx-copybutton = "^0.5.2"
+pydata-sphinx-theme = "^0.16.1"
+
+[tool.pytest.ini_options]
+# addopts = "--basetemp = ./tests/"
+tmp_path_retention_count = 2
+env = [
+    "PYTEST_DEBUG_TEMPROOT=./tests/",
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

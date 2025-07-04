@@ -1,0 +1,95 @@
+tamlep_package.utils
+====================
+
+.. py:module:: tamlep_package.utils
+
+.. autoapi-nested-parse::
+
+   Utililty functions for tamlep_package
+
+   ..
+       !! processed by numpydoc !!
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   tamlep_package.utils.set_seed
+   tamlep_package.utils.attach_debugger
+   tamlep_package.utils.timer
+
+
+Module Contents
+---------------
+
+.. py:function:: set_seed(seed=100)
+
+   
+   Set random seed for random, numpy, os.environ['PYTHONHASHSEED']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: attach_debugger()
+
+   
+   Attach VS Code debugger
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: timer(func)
+
+   
+   Decorator to compute execution time
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+

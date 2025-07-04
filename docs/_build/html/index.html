@@ -1,0 +1,606 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Documentation &#8212; TAMLEP 0.3 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=b489f392"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Usage" href="usage.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">TAMLEP 0.3 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="config_manager.html">
+    Configuration Manager
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="ingest_data.html">
+    Prepare Data
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="train.html">
+    Train Models
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="score.html">
+    Score Models
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="utils.html">
+    Utility Functions
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="config_manager.html">
+    Configuration Manager
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="ingest_data.html">
+    Prepare Data
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="train.html">
+    Train Models
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="score.html">
+    Score Models
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="utils.html">
+    Utility Functions
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h1>
+</section>
+<section id="tamlep-median-housing-value-prediction">
+<h1>TAMLEP - Median housing value prediction<a class="headerlink" href="#tamlep-median-housing-value-prediction" title="Link to this heading">#</a></h1>
+<p>The housing data can be downloaded from <a class="reference external" href="https://raw.githubusercontent.com/ageron/handson-ml/master/">this URL</a>. The script has codes to download the data. We have modelled the median house value on given housing data.</p>
+<p>The following techniques have been used:</p>
+<ul class="simple">
+<li><p>Linear regression</p></li>
+<li><p>Decision Tree</p></li>
+<li><p>Random Forest</p></li>
+</ul>
+<section id="steps-performed">
+<h2>Steps performed<a class="headerlink" href="#steps-performed" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>We prepare and clean the data. We check and impute for missing values.</p></li>
+<li><p>Features are generated and the variables are checked for correlation.</p></li>
+<li><p>Multiple sampling techinuqies are evaluated. The data set is split into train and test.</p></li>
+<li><p>All the above said modelling techniques are tried and evaluated. The final metric used to evaluate is mean squared error.</p></li>
+</ul>
+</section>
+<section id="environment-set-up">
+<h2>Environment Set Up<a class="headerlink" href="#environment-set-up" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>We have used <a class="reference external" href="https://python-poetry.org/">Poetry</a> to package and manage dependencies for this project.</p></li>
+<li><p>The easiest way to install poetry is using pipx: <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span> <span class="pre">poetry</span></code></p></li>
+</ul>
+<section id="steps-to-install-project-package">
+<h3>Steps to Install Project Package<a class="headerlink" href="#steps-to-install-project-package" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Ensure you have Python &gt;= 3.12 installed in your system.</p></li>
+<li><p>Clone the project repository
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/RakeshSTA/mle-training.git</span></code></p></li>
+<li><p>Change directory to the project repository root.
+<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">mle-training</span></code></p></li>
+<li><p>Create a new virtual environment for the project by running the following command:
+<code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">env</span> <span class="pre">use</span> <span class="pre">&lt;full_path_to_python_3.12+_exe_file&gt;</span></code></p></li>
+<li><p>Install the project packages and dependencies with the following command. This command installs the project package in editable mode.
+<code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">install</span></code></p></li>
+<li><p>Test the installation and project modules with pytest.
+<code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pytest</span> <span class="pre">-v</span></code></p></li>
+</ol>
+</section>
+<section id="steps-to-run-the-project-code">
+<h3>Steps To Run the Project Code<a class="headerlink" href="#steps-to-run-the-project-code" title="Link to this heading">#</a></h3>
+<ol class="arabic">
+<li><p>Activate the virtual environment using the following command</p>
+<ul class="simple">
+<li><p>Using poetry: <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">env</span> <span class="pre">activate</span></code></p></li>
+<li><p>Without poetry (in linux environment):
+<code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">.venv/bin/activate</span></code></p></li>
+<li><p>Without poetry (in windows environment):
+<code class="docutils literal notranslate"><span class="pre">.venv\bin\activate</span></code></p></li>
+</ul>
+</li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">config.toml</span></code> file to set the default configurations.</p></li>
+<li><p>Run the project scripts using the following commands. Refer module documentation for command line options for each script.</p>
+<p>a. Download data:</p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">src/tamlep_package/ingest_data.py</span></code></p>
+<p>b. Train models:</p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">src/tamlep_package/train.py</span></code></p>
+<p>c. Score models:</p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">src/tamlep_package/score.py</span></code></p>
+</li>
+</ol>
+</section>
+</section>
+<section id="todo">
+<h2>TODO<a class="headerlink" href="#todo" title="Link to this heading">#</a></h2>
+</section>
+<section id="changelog">
+<h2>CHANGELOG<a class="headerlink" href="#changelog" title="Link to this heading">#</a></h2>
+<section id="v0-3">
+<h3>v0.3<a class="headerlink" href="#v0-3" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Refactor and package the project code base for production deployment</p></li>
+<li><p>Add logging &amp; testing with pytest</p></li>
+<li><p>Add project documentation</p></li>
+</ul>
+<p>For further information, check out <a class="reference internal" href="usage.html"><span class="doc">Usage</span></a>.
+Read installation instructions in <a class="reference internal" href="usage.html#installation"><span class="std std-ref">Installation</span></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This library is still under development!</p>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#installation">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="config_manager.html">Configuration Manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="config_manager.html#classes-functions">Classes &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config_manager.html#config-manager-class">Config Manager Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ingest_data.html">Prepare Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ingest_data.html#command-line-usage">Command-line Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingest_data.html#command-line-options">Command-line Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingest_data.html#command-line-example">Command Line Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingest_data.html#classes-functions">Classes &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingest_data.html#download-data">Download Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingest_data.html#split-data-into-training-and-test-sets">Split data into Training and Test sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingest_data.html#get-correlation-matrix">Get Correlation Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingest_data.html#create-scatter-plot-of-longitude-latitude">Create Scatter Plot of Longitude &amp; Latitude</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingest_data.html#get-proportion-by-income-slab">Get Proportion by Income Slab</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="train.html">Train Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="train.html#command-line-usage">Command-line Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train.html#command-line-options">Command-line Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train.html#classes-functions">Classes &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train.html#train-models-on-housing-dataset">Train Models on Housing Dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="score.html">Score Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="score.html#command-line-usage">Command-line Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="score.html#command-line-options">Command-line Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="score.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="score.html#classes-functions">Classes &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="score.html#score-models-trained-on-housing-dataset">Score Models Trained on Housing Dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utility Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="utils.html#classes-functions">Classes &amp; Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="usage.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Usage</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Documentation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tamlep-median-housing-value-prediction">TAMLEP - Median housing value prediction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-performed">Steps performed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-set-up">Environment Set Up</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-to-install-project-package">Steps to Install Project Package</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-to-run-the-project-code">Steps To Run the Project Code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo">TODO</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changelog">CHANGELOG</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#v0-3">v0.3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Rakesh Sukumar.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
