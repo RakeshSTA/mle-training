@@ -1,0 +1,19 @@
+tamlep_package
+==============
+
+.. py:module:: tamlep_package
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/tamlep_package/config_manager/index
+   /autoapi/tamlep_package/ingest_data/index
+   /autoapi/tamlep_package/score/index
+   /autoapi/tamlep_package/train/index
+   /autoapi/tamlep_package/utils/index
+
+

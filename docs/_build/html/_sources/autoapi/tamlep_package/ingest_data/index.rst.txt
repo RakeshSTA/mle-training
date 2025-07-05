@@ -1,0 +1,230 @@
+tamlep_package.ingest_data
+==========================
+
+.. py:module:: tamlep_package.ingest_data
+
+.. autoapi-nested-parse::
+
+   Download housing data set.
+
+   Functions
+   --------
+   fetch_housing_data(housing_url=HOUSING_URL, download_folder=RAW_DATA_PATH)
+       Download housing data to specified folder.
+
+   Command-line Usage
+   ------------------
+   To use this module from the command line, run:
+       python ingest_data.py [OPTIONS]
+
+   Command-line Options
+   --------
+   --raw-data-dir
+       Raw data directory name
+   --processed-data-dir
+       Processed data directory name
+   --log-level : {"DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"}
+       Logging level
+   --log-file-path
+       Path to log file
+   --no-console-log
+       Flag to turn off logs to console
+
+   Examples
+   --------
+   ```
+   python ingest_data.py --log-level INFO     --log-file-path ./logs/app.log --no-console-log
+   ```
+
+   ..
+       !! processed by numpydoc !!
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   tamlep_package.ingest_data.logger
+   tamlep_package.ingest_data.DOWNLOAD_ROOT
+   tamlep_package.ingest_data.HOUSING_URL
+   tamlep_package.ingest_data.HOUSING_PATH
+   tamlep_package.ingest_data.RAW_DATA_PATH
+   tamlep_package.ingest_data.PROCESSED_DATA_PATH
+   tamlep_package.ingest_data.ARTIFACTS_PATH
+   tamlep_package.ingest_data.parser
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   tamlep_package.ingest_data.fetch_housing_data
+   tamlep_package.ingest_data.income_cat_proportions
+   tamlep_package.ingest_data.split_housing_data
+   tamlep_package.ingest_data.get_correlation_matrix
+   tamlep_package.ingest_data.create_scatter_plot
+
+
+Module Contents
+---------------
+
+.. py:data:: logger
+
+.. py:data:: DOWNLOAD_ROOT
+   :value: 'https://raw.githubusercontent.com/ageron/handson-ml/master/'
+
+
+.. py:data:: HOUSING_URL
+   :value: 'https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz'
+
+
+.. py:data:: HOUSING_PATH
+
+.. py:data:: RAW_DATA_PATH
+
+.. py:data:: PROCESSED_DATA_PATH
+
+.. py:data:: ARTIFACTS_PATH
+
+.. py:function:: fetch_housing_data(housing_url=HOUSING_URL, download_folder=RAW_DATA_PATH)
+
+   
+   Download housing dataset from the provided URL
+
+   Parameters
+   --------
+   housing_url : str, optional
+       The URL to download data. Defaults to:
+       https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz
+   download_folder: str, optional
+       The folder to download the data. Defaults to raw data folder
+       in the configuration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: income_cat_proportions(data)
+
+   
+   Get the proportion of records for each income category
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: split_housing_data(housing_data_path: pathlib.Path, processed_data_dir_path: pathlib.Path = PROCESSED_DATA_PATH)
+
+   
+   Split the housing data into training and test sets
+
+   Parameters
+   --------
+   housing_data_path : pathlib.Path
+       Path to raw dataset.
+   processed_data_dir_path : pathlib.Path, optional
+       Path to save the processed and split data.
+       Defaults to processed data folder in configuration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: get_correlation_matrix(data_df: pandas.DataFrame, order_by: List[str] | str = 'median_house_value', ascending: bool = False)
+
+   
+   Get the correlation matrix for the data
+
+   Parameters
+   data_df: pd.DataFrame
+       The dataframe to compute correlations
+   order_by: List[str] | str, optional
+       The column or list of columns to order the results.
+       Defaults to `median_house_value`
+   ascending: bool, optional
+       Sort order. Sort in descending order bu default
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: create_scatter_plot(data_df: pandas.DataFrame, x: str = 'longitude', y: str = 'latitude', alpha: float = 0.1, figsize: tuple = (10, 10), show_plot: bool = False)
+
+   
+   Create a scatter plot of housing data by longitude and latitude.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:data:: parser
+

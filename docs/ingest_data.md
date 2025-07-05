@@ -1,0 +1,50 @@
+# Prepare Data
+
+```{eval-rst}
+.. automodule:: tamlep_package.ingest_data
+```
+
+## Classes & Functions
+
+```{eval-rst}
+.. autosummary::
+
+   create_scatter_plot
+   fetch_housing_data
+   get_correlation_matrix
+   income_cat_proportions
+   split_housing_data
+
+```
+
+## Download Data
+
+To download data and split it into training and test set, you can use the {py:func}`tamlep_package.ingest_data.fetch_housing_data` function:
+
+```{eval-rst}
+.. autofunction:: tamlep_package.ingest_data.fetch_housing_data
+```
+
+## Split data into Training and Test sets
+
+```{eval-rst}
+.. autofunction:: tamlep_package.ingest_data.split_housing_data
+```
+
+## Get Correlation Matrix
+
+```{eval-rst}
+.. autofunction:: tamlep_package.ingest_data.get_correlation_matrix
+```
+
+## Create Scatter Plot of Longitude & Latitude
+
+```{eval-rst}
+.. autofunction:: tamlep_package.ingest_data.create_scatter_plot
+```
+
+## Get Proportion by Income Slab
+
+```{eval-rst}
+.. autofunction:: tamlep_package.ingest_data.income_cat_proportions
+```

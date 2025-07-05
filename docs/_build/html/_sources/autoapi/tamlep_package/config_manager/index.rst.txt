@@ -1,0 +1,250 @@
+tamlep_package.config_manager
+=============================
+
+.. py:module:: tamlep_package.config_manager
+
+.. autoapi-nested-parse::
+
+   "ConfigManager" class for managing project configuration.
+
+   This module provides a ConfigManager class for managing project configuration.
+   It loads default configurations from a `config.toml` file and
+   allows overriding.
+
+   ..
+       !! processed by numpydoc !!
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   tamlep_package.config_manager.logger
+   tamlep_package.config_manager.config
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   tamlep_package.config_manager.ConfigManager
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   tamlep_package.config_manager.reload_project_modules
+
+
+Module Contents
+---------------
+
+.. py:data:: logger
+
+.. py:function:: reload_project_modules(project_package: str = 'tamlep_package')
+
+   
+   Reload all tamlep_package modules except config_manager.
+
+   Parameters
+   --------
+   project_package: str, optional
+       The package to reload. Defaults to tamlep_package.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:class:: ConfigManager
+
+   
+   A singleton class for managing project configuration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+   .. py:attribute:: _instance
+      :value: None
+
+
+
+   .. py:method:: _initialize()
+
+      
+      Initialize the configuration manager.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+   .. py:method:: _load_config()
+
+      
+      Load default configurations from `config.toml` file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+   .. py:method:: set_up_paths(models_dir: str | None = None, data_dir: str | None = None, raw_data_dir: str | None = None, processed_data_dir: str | None = None, log_dir: str | None = None, artifacts_dir: str | None = None, refresh_config: bool = False)
+
+      
+      Set up project paths based on the configuration.
+
+      Parameters
+      --------
+      models_dir, data_dir, raw_data_dir, processed_data_dir : str, optional
+          Folder names to override the corresponding default configuration.
+      log_dir, artifacts_dir : str, optional
+          Folder names to override the corresponding default configuration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+   .. py:method:: set_up_logging(log_level: str | None = None, backup_count: int | None = None, max_size_mb: int | None = None, log_file: str | None = None, error_file: str | None = None, add_console_logger: bool = True, add_file_logger: bool = False, add_error_file_logger: bool = False, refresh_config: bool = False)
+
+      
+      Set up logging configuration.
+
+      Parameters
+      ---------
+      log_level: str, optional
+          Python logging module log level.
+      backup_count: int, optional
+          Number of backup logfiles to retain
+      max_size_mb: int, optional
+          Maximum size of logfile in megabytes before rotating.
+      log_file: str, optional
+          Name of the logfile.
+      error_file: str, optional
+          Name of the error logfile.
+      add_console_logger: bool, optional
+          Whether to add a console logger.
+      add_file_logger: bool, optional
+          Whether to add a file logger.
+      add_error_file_logger: bool, optional
+          Whether to add an error file logger.
+      refresh_config: bool, optional
+          Whether to refresh the configuration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+   .. py:method:: refresh_configuration()
+
+      
+      Reload the project modules except the config_manager.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+.. py:data:: config
+

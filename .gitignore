@@ -1,3 +1,10 @@
 *.pyc
 **.csv
+*.joblib
 datasets/**
+models/**
+artifacts/**
+.venv/*
+*.lock
+*/__pycache__/*
+tests/pytest-of-*/*

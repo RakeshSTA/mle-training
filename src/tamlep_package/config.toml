@@ -1,0 +1,15 @@
+[paths]
+models_dir = "models"
+log_dir = "logs"
+data_dir = "datasets"
+raw_data_dir = "raw_data"
+processed_data_dir = "processed_data"
+artifacts_dir = "artifacts"
+
+
+[logging]
+log_level = "INFO"
+backup_count = 1
+max_size_mb = 20
+log_file = "tamlep.log"
+error_file = "error.log"
